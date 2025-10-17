@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Business Analytics Workshop",
     "section": "",
-    "text": "Welcome\nWelcome to the Business Analytics Workshop 2025!",
+    "text": "Welcome\nWelcome to the Business Analytics Workshop 2025!\nBuilding on prior exposure to programming and modeling fundamentals, this workshop focuses on real-world applications through cutting-edge tools like VS Code, Git, GitHub Copilot, and no-code/low-code AI agent platforms. Participants will engage with case-based exercises and live demonstrations to explore how modern data-driven teams collaborate, code, and build AI-enhanced solutions in agile business environments. This workshop seeks to bridge analytical modeling, modern software practices, and AI development workflows.",
     "crumbs": [
       "Welcome"
     ]
@@ -170,6 +170,16 @@
     ]
   },
   {
+    "objectID": "streamlit.html#context-and-goal",
+    "href": "streamlit.html#context-and-goal",
+    "title": "3  Develop an app with streamlit",
+    "section": "",
+    "text": "ImportantGoal\n\n\n\nTransition from a prototype .ipynb file to a production-ready .py file that builds an interactive Streamlit dashboard.\n\n\n\n\nRefactor your notebook code into modular Python functions.\nWrap those functions inside an interactive Streamlit interface.\nUnderstand how to iterate quickly with streamlit run app.py.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Develop an app with `streamlit`</span>"
+    ]
+  },
+  {
     "objectID": "streamlit.html#start-from-a-.ipynb-file",
     "href": "streamlit.html#start-from-a-.ipynb-file",
     "title": "3  Develop an app with streamlit",
@@ -200,21 +210,21 @@
     ]
   },
   {
-    "objectID": "streamlit.html#vibe-coding-with-github-copilot-agent",
-    "href": "streamlit.html#vibe-coding-with-github-copilot-agent",
+    "objectID": "streamlit.html#build-a-streamlit-app",
+    "href": "streamlit.html#build-a-streamlit-app",
     "title": "3  Develop an app with streamlit",
-    "section": "3.4 Vibe Coding with Github Copilot Agent",
-    "text": "3.4 Vibe Coding with Github Copilot Agent",
+    "section": "3.5 Build a Streamlit app",
+    "text": "3.5 Build a Streamlit app\nHere is an example. Try to build a dashboard displaying the financial metrics interactively.\n\n\n\nAn Streamlit Example",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Develop an app with `streamlit`</span>"
     ]
   },
   {
-    "objectID": "streamlit.html#google-gemini-api",
-    "href": "streamlit.html#google-gemini-api",
+    "objectID": "streamlit.html#bonus-add-an-ai-feature",
+    "href": "streamlit.html#bonus-add-an-ai-feature",
     "title": "3  Develop an app with streamlit",
-    "section": "3.6 Google Gemini API",
-    "text": "3.6 Google Gemini API\nhttps://ai.google.dev/gemini-api/docs/migrate#install-sdk",
+    "section": "3.6 💡 Bonus: Add an AI Feature",
+    "text": "3.6 💡 Bonus: Add an AI Feature\nIntegrate the Google Gemini API to enhance your app with AI-powered capabilities.\n\nExplore the API\nLearn how to use the Google Gemini API and follow the setup guide to install the SDK.\nGet an API Key\nYou can obtain a free API key using your Google account.\nKeep It Secure\nNever share or publish your API key on GitHub or any public platform — treat it like a password. Delete it after use.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Develop an app with `streamlit`</span>"
     ]
@@ -230,26 +240,6 @@
     ]
   },
   {
-    "objectID": "references.html#additional-resources",
-    "href": "references.html#additional-resources",
-    "title": "References",
-    "section": "",
-    "text": "Command Line Crash Course - Learn Python the Hard Way, Appendix A",
-    "crumbs": [
-      "References"
-    ]
-  },
-  {
-    "objectID": "references.html#basic-command-line-cheetsheet",
-    "href": "references.html#basic-command-line-cheetsheet",
-    "title": "References",
-    "section": "",
-    "text": "Mac/Linux\nWindows\nWhat it does\n\n\n\n\npwd\npwd\nprint working directory )\n\n\nhostname\nhostname\ncomputer’s network name )\n\n\nmkdir\nmkdir\nmake directory )\n\n\ncd\ncd\nchange directory )\n\n\nls\nls\nlist directory )\n\n\nrmdir\nrmdir\nremove directory )\n\n\npushd\npushd\npush directory )\n\n\npopd\npopd\npop directory )\n\n\ncp\ncp\ncopy a file/dir )\n\n\nmv\nmv\nmove a file/dir )\n\n\ncat\ntype\nprint whole file )\n\n\nfind\ndir -r\nfind files )\n\n\ngrep\nselect-string\nfind inside files )\n\n\nman\nhelp\nread a manual page )\n\n\necho\necho\nprint arguments )\n\n\nexit\nexit\nexit the shell )\n\n\n\n\n\nCommand Line Crash Course - Learn Python the Hard Way, Appendix A",
-    "crumbs": [
-      "References"
-    ]
-  },
-  {
     "objectID": "references.html#basic-command-line-crash-course",
     "href": "references.html#basic-command-line-crash-course",
     "title": "References",
@@ -257,56 +247,6 @@
     "text": "Command Line Crash Course - Learn Python the Hard Way, Appendix A",
     "crumbs": [
       "References"
-    ]
-  },
-  {
-    "objectID": "streamlit.html#context-and-goal",
-    "href": "streamlit.html#context-and-goal",
-    "title": "3  Develop an app with streamlit",
-    "section": "",
-    "text": "ImportantGoal\n\n\n\nTransition from a prototype .ipynb file to a production-ready .py file that builds an interactive Streamlit dashboard.\n\n\n\n\nRefactor your notebook code into modular Python functions.\nWrap those functions inside an interactive Streamlit interface.\nUnderstand how to iterate quickly with streamlit run app.py.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Develop an app with `streamlit`</span>"
-    ]
-  },
-  {
-    "objectID": "streamlit.html#build-a-streamlit-app",
-    "href": "streamlit.html#build-a-streamlit-app",
-    "title": "3  Develop an app with streamlit",
-    "section": "3.5 Build a Streamlit app",
-    "text": "3.5 Build a Streamlit app\nHere is an example. Try to build a dashboard displaying the financial metrics interactively.\n\n\n\nAn Streamlit Example",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Develop an app with `streamlit`</span>"
-    ]
-  },
-  {
-    "objectID": "streamlit.html#bonous-add-a-ai-feature-in-the-dashboard",
-    "href": "streamlit.html#bonous-add-a-ai-feature-in-the-dashboard",
-    "title": "3  Develop an app with streamlit",
-    "section": "3.6 Bonous: Add a AI feature in the dashboard:",
-    "text": "3.6 Bonous: Add a AI feature in the dashboard:\n\nGoogle Gemini API\n\nHow to use Google Gemini API https://ai.google.dev/gemini-api/docs/migrate#install-sdk\nGet a API KEY",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Develop an app with `streamlit`</span>"
-    ]
-  },
-  {
-    "objectID": "streamlit.html#bonous-add-an-ai-feature",
-    "href": "streamlit.html#bonous-add-an-ai-feature",
-    "title": "3  Develop an app with streamlit",
-    "section": "3.6 Bonous: Add an AI Feature",
-    "text": "3.6 Bonous: Add an AI Feature\n\nGoogle Gemini API\n\nHow to use Google Gemini API\nGet a free API KEY using your google account.\nMake sure that you protect your API KEY and never publish it on Github or the open web.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Develop an app with `streamlit`</span>"
-    ]
-  },
-  {
-    "objectID": "streamlit.html#bonus-add-an-ai-feature",
-    "href": "streamlit.html#bonus-add-an-ai-feature",
-    "title": "3  Develop an app with streamlit",
-    "section": "3.6 💡 Bonus: Add an AI Feature",
-    "text": "3.6 💡 Bonus: Add an AI Feature\nIntegrate the Google Gemini API to enhance your app with AI-powered capabilities.\n\nExplore the API\nLearn how to use the Google Gemini API and follow the setup guide to install the SDK.\nGet an API Key\nYou can obtain a free API key using your Google account.\nKeep It Secure\nNever share or publish your API key on GitHub or any public platform — treat it like a password. Delete it after use.",
-    "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Develop an app with `streamlit`</span>"
     ]
   }
 ]
