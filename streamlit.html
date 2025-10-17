@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -150,10 +185,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#start-from-a-.ipynb-file" id="toc-start-from-a-.ipynb-file" class="nav-link active" data-scroll-target="#start-from-a-.ipynb-file"><span class="header-section-number">3.1</span> Start from a <code>.ipynb</code> file</a></li>
-  <li><a href="#make-it-a-.py-file-with-functions" id="toc-make-it-a-.py-file-with-functions" class="nav-link" data-scroll-target="#make-it-a-.py-file-with-functions"><span class="header-section-number">3.2</span> Make it a <code>.py</code> file with functions</a></li>
-  <li><a href="#learn-a-bit-about-streamlit" id="toc-learn-a-bit-about-streamlit" class="nav-link" data-scroll-target="#learn-a-bit-about-streamlit"><span class="header-section-number">3.3</span> Learn a bit about Streamlit</a></li>
-  <li><a href="#vibe-coding-with-github-copilot-agent" id="toc-vibe-coding-with-github-copilot-agent" class="nav-link" data-scroll-target="#vibe-coding-with-github-copilot-agent"><span class="header-section-number">3.4</span> Vibe Coding with Github Copilot Agent</a></li>
+  <li><a href="#context-and-goal" id="toc-context-and-goal" class="nav-link active" data-scroll-target="#context-and-goal"><span class="header-section-number">3.1</span> Context and Goal</a></li>
+  <li><a href="#start-from-a-.ipynb-file" id="toc-start-from-a-.ipynb-file" class="nav-link" data-scroll-target="#start-from-a-.ipynb-file"><span class="header-section-number">3.2</span> Start from a <code>.ipynb</code> file</a></li>
+  <li><a href="#make-it-a-.py-file-with-functions" id="toc-make-it-a-.py-file-with-functions" class="nav-link" data-scroll-target="#make-it-a-.py-file-with-functions"><span class="header-section-number">3.3</span> Make it a <code>.py</code> file with functions</a></li>
+  <li><a href="#learn-a-bit-about-streamlit" id="toc-learn-a-bit-about-streamlit" class="nav-link" data-scroll-target="#learn-a-bit-about-streamlit"><span class="header-section-number">3.4</span> Learn a bit about Streamlit</a></li>
+  <li><a href="#build-a-streamlit-app" id="toc-build-a-streamlit-app" class="nav-link" data-scroll-target="#build-a-streamlit-app"><span class="header-section-number">3.5</span> Build a Streamlit app</a></li>
+  <li><a href="#bonus-add-an-ai-feature" id="toc-bonus-add-an-ai-feature" class="nav-link" data-scroll-target="#bonus-add-an-ai-feature"><span class="header-section-number">3.6</span> 💡 Bonus: Add an AI Feature</a></li>
   </ul>
 </nav>
     </div>
@@ -179,31 +216,135 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="start-from-a-.ipynb-file" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="start-from-a-.ipynb-file"><span class="header-section-number">3.1</span> Start from a <code>.ipynb</code> file</h2>
-<p>Files:</p>
+<section id="context-and-goal" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="context-and-goal"><span class="header-section-number">3.1</span> Context and Goal</h2>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Goal
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Transition from a prototype <code>.ipynb</code> file to a production-ready <code>.py</code> file that builds an interactive Streamlit dashboard.</p>
+</div>
+</div>
+<p>Data scientists often start in Jupyter Notebooks for exploration and analysis. However, real-world applications require deployable, interactive dashboards for sharing insights with others. The goal here is to:</p>
 <ul>
-<li><code>sp500_data.csv</code> – Financial data.</li>
-<li><code>sp500_tickers.csv</code> – List of tickers.</li>
+<li>Refactor your notebook code into modular Python functions.</li>
+<li>Wrap those functions inside an interactive Streamlit interface.</li>
+<li>Understand how to iterate quickly with streamlit run app.py.</li>
 </ul>
 </section>
-<section id="make-it-a-.py-file-with-functions" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="make-it-a-.py-file-with-functions"><span class="header-section-number">3.2</span> Make it a <code>.py</code> file with functions</h2>
+<section id="start-from-a-.ipynb-file" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="start-from-a-.ipynb-file"><span class="header-section-number">3.2</span> Start from a <code>.ipynb</code> file</h2>
+<ul class="task-list">
+<li><p><label><input type="checkbox">Download the following files from Canvas course.</label></p>
+<ul>
+<li><code>Compute Financial Ratios Notebook.ipynb</code> – a Jupyter Notebook</li>
+<li><code>sp500_data.csv</code> – Financial data.</li>
+<li><code>sp500_tickers.csv</code> – List of tickers.</li>
+</ul></li>
+<li><p><label><input type="checkbox">Create a folder named <code>streamlit25</code> in the default directory using bash command.</label></p></li>
+<li><p><label><input type="checkbox">Drag these three files into this folder in your browser.</label></p></li>
+</ul>
 </section>
-<section id="learn-a-bit-about-streamlit" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="learn-a-bit-about-streamlit"><span class="header-section-number">3.3</span> Learn a bit about Streamlit</h2>
+<section id="make-it-a-.py-file-with-functions" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="make-it-a-.py-file-with-functions"><span class="header-section-number">3.3</span> Make it a <code>.py</code> file with functions</h2>
+<p>The syntax of defining a python function.</p>
+<p><img src="images/apythonfunc.png" class="img-fluid" width="400"></p>
+<ul class="task-list">
+<li><label><input type="checkbox">1. Read the <code>Compute Financial Ratios Notebook.ipynb</code></label></li>
+<li><label><input type="checkbox">2. Add a z-score metric seen in <a href="#fig-z-score" class="quarto-xref">Figure&nbsp;<span>3.1</span></a>.</label></li>
+</ul>
+<div id="fig-z-score" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-z-score-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/z-score.png" class="img-fluid figure-img" width="550">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-z-score-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3.1: Z-score reference
+</figcaption>
+</figure>
+</div>
+<ul class="task-list">
+<li><label><input type="checkbox">3. Make a empty <code>finratios.py</code> script file inside the same folder using bash command.</label></li>
+<li><label><input type="checkbox">4. Re-write the notebook code into reusable functions inside <code>finratios.py</code></label>
+<ul>
+<li>‘fetch_data_local’</li>
+<li><code>fetch_data_local_single_ticker</code></li>
+<li><code>calculate_metrics</code></li>
+<li><code>plot_trend</code></li>
+</ul></li>
+</ul>
+<p><strong>Good practices</strong>:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Each function should do one clear thing (e.g., load data, compute metrics, or plot)</label></li>
+<li><label><input type="checkbox">When writing functions, <strong>only use variables that come from the input parameters</strong>. If you need to use something inside the function, then make them input parameters.</label></li>
+</ul>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>⚠️ Be Careful with Function Inputs
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Don’t rely on variables that aren’t passed into your function.<br>
+If your function can’t run using only its inputs, it’s not truly reusable.</p>
+<p>✅ <strong>Do this:</strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compute_margin(revenue, cost):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (revenue <span class="op">-</span> cost) <span class="op">/</span> revenue</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>🚫 <strong>Not this</strong>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>total_revenue <span class="op">=</span> <span class="dv">1000</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compute_margin(cost):</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (total_revenue <span class="op">-</span> cost) <span class="op">/</span> total_revenue  </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># works in notebook, breaks in module</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<ul class="task-list">
+<li><label><input type="checkbox">Decide on return values.<br>
+</label></li>
+<li><label><input type="checkbox">Add a <code>if __name__ == "__main__":</code> for testing at the bottom of <code>finratios.py</code>, such as:</label></li>
+</ul>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Simple test cases</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(compute_pe_ratio(<span class="dv">1000000</span>, <span class="dv">50000</span>, <span class="dv">30</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="learn-a-bit-about-streamlit" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="learn-a-bit-about-streamlit"><span class="header-section-number">3.4</span> Learn a bit about Streamlit</h2>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Questions that I should ask myself
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You don’t know what Streamlit can do. Streamlit doesn’t know what you want.<br>
+But, we’ve gotta start <em>somewhere</em>.<br>
+So let’s learn a bit. Once you know <strong>what it <em>can</em> do</strong>,<br>
+you’ll finally know <strong>what you <em>can make it do</em></strong> (with AI’s help).</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>How learn to use a new Python package?
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>What is Streamlit, and where can I find its API reference and official documentation?</li>
+<li>What is Streamlit, and where is its API reference and official documentation?</li>
 <li>What can Streamlit do — what kinds of apps or problems is it best at solving?</li>
 <li>What small examples or experiments can I build to quickly discover and learn its core features?</li>
 </ul>
@@ -211,14 +352,36 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <ul>
 <li><strong>Start with the official docs and examples</strong> — skim the Streamlit docs homepage and gallery to get a mental map of what’s possible before diving into code.</li>
-<li><strong>Learn by doing small experiments</strong> — build micro-apps (e.g., one with a button, one with a chart) to turn reading into muscle memory.</li>
+<li><strong>Learn by doing small experiments</strong> — build micro-apps (e.g., one with a button, one with a chart) to turn reading into muscle memory.
+<ul>
+<li>E.g., create <code>app1.py</code>, <code>app2.py</code> files each to test and run some micro streamlit apps.</li>
+</ul></li>
 <li><strong>Read code, not just tutorials</strong> — explore community demos or open-source Streamlit apps to see how others structure layouts, manage state, and handle inputs.</li>
-<li><strong>Iterate with feedback loops</strong> — run streamlit run app.py often and tweak one thing at a time; immediate visual feedback accelerates understanding.</li>
+<li><strong>Iterate with feedback loops</strong> — run streamlit run <code>app.py</code> often and tweak one thing at a time; immediate visual feedback accelerates understanding.</li>
 <li><strong>Reflect and generalize</strong> — after each mini-project, note what patterns repeat (e.g., sidebar widgets, caching, layout control) to build knowledge for future tools.</li>
 </ul>
 </section>
-<section id="vibe-coding-with-github-copilot-agent" class="level2" data-number="3.4">
-<h2 data-number="3.4" class="anchored" data-anchor-id="vibe-coding-with-github-copilot-agent"><span class="header-section-number">3.4</span> Vibe Coding with Github Copilot Agent</h2>
+<section id="build-a-streamlit-app" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="build-a-streamlit-app"><span class="header-section-number">3.5</span> Build a Streamlit app</h2>
+<p>Here is an example. Try to build a dashboard displaying the financial metrics interactively.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/dashboard.png" class="img-fluid figure-img" width="650"></p>
+<figcaption>An Streamlit Example</figcaption>
+</figure>
+</div>
+</section>
+<section id="bonus-add-an-ai-feature" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="bonus-add-an-ai-feature"><span class="header-section-number">3.6</span> 💡 Bonus: Add an AI Feature</h2>
+<p><strong>Integrate the Google Gemini API</strong> to enhance your app with AI-powered capabilities.</p>
+<ul>
+<li><p><strong>Explore the API</strong><br>
+Learn how to use the <a href="https://ai.google.dev/gemini-api/docs/migrate#install-sdk">Google Gemini API</a> and follow the setup guide to install the SDK.</p></li>
+<li><p><strong>Get an API Key</strong><br>
+You can obtain a free API key using your Google account.</p></li>
+<li><p><strong>Keep It Secure</strong><br>
+Never share or publish your API key on GitHub or any public platform — treat it like a password. Delete it after use.</p></li>
+</ul>
 
 
 </section>

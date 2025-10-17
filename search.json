@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Business Analytics Workshop",
     "section": "",
-    "text": "Welcome\nWelcome to the Business Analytics Workshop 2025!",
+    "text": "Welcome\nWelcome to the Business Analytics Workshop 2025!\nBuilding on prior exposure to programming and modeling fundamentals, this workshop focuses on real-world applications through cutting-edge tools like VS Code, Git, GitHub Copilot, and no-code/low-code AI agent platforms. Participants will engage with case-based exercises and live demonstrations to explore how modern data-driven teams collaborate, code, and build AI-enhanced solutions in agile business environments. This workshop seeks to bridge analytical modeling, modern software practices, and AI development workflows.",
     "crumbs": [
       "Welcome"
     ]
@@ -164,7 +164,17 @@
     "href": "streamlit.html",
     "title": "3  Develop an app with streamlit",
     "section": "",
-    "text": "3.1 Start from a .ipynb file\nFiles:",
+    "text": "3.1 Context and Goal\nData scientists often start in Jupyter Notebooks for exploration and analysis. However, real-world applications require deployable, interactive dashboards for sharing insights with others. The goal here is to:",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Develop an app with `streamlit`</span>"
+    ]
+  },
+  {
+    "objectID": "streamlit.html#context-and-goal",
+    "href": "streamlit.html#context-and-goal",
+    "title": "3  Develop an app with streamlit",
+    "section": "",
+    "text": "ImportantGoal\n\n\n\nTransition from a prototype .ipynb file to a production-ready .py file that builds an interactive Streamlit dashboard.\n\n\n\n\nRefactor your notebook code into modular Python functions.\nWrap those functions inside an interactive Streamlit interface.\nUnderstand how to iterate quickly with streamlit run app.py.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Develop an app with `streamlit`</span>"
     ]
@@ -173,8 +183,8 @@
     "objectID": "streamlit.html#start-from-a-.ipynb-file",
     "href": "streamlit.html#start-from-a-.ipynb-file",
     "title": "3  Develop an app with streamlit",
-    "section": "",
-    "text": "sp500_data.csv – Financial data.\nsp500_tickers.csv – List of tickers.",
+    "section": "3.2 Start from a .ipynb file",
+    "text": "3.2 Start from a .ipynb file\n\nDownload the following files from Canvas course.\n\nCompute Financial Ratios Notebook.ipynb – a Jupyter Notebook\nsp500_data.csv – Financial data.\nsp500_tickers.csv – List of tickers.\n\nCreate a folder named streamlit25 in the default directory using bash command.\nDrag these three files into this folder in your browser.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Develop an app with `streamlit`</span>"
     ]
@@ -183,8 +193,8 @@
     "objectID": "streamlit.html#make-it-a-.py-file-with-functions",
     "href": "streamlit.html#make-it-a-.py-file-with-functions",
     "title": "3  Develop an app with streamlit",
-    "section": "3.2 Make it a .py file with functions",
-    "text": "3.2 Make it a .py file with functions",
+    "section": "3.3 Make it a .py file with functions",
+    "text": "3.3 Make it a .py file with functions\nThe syntax of defining a python function.\n\n\n1. Read the Compute Financial Ratios Notebook.ipynb\n2. Add a z-score metric seen in Figure 3.1.\n\n\n\n\n\n\n\nFigure 3.1: Z-score reference\n\n\n\n\n3. Make a empty finratios.py script file inside the same folder using bash command.\n4. Re-write the notebook code into reusable functions inside finratios.py\n\n‘fetch_data_local’\nfetch_data_local_single_ticker\ncalculate_metrics\nplot_trend\n\n\nGood practices:\n\nEach function should do one clear thing (e.g., load data, compute metrics, or plot)\nWhen writing functions, only use variables that come from the input parameters. If you need to use something inside the function, then make them input parameters.\n\n\n\n\n\n\n\nWarning⚠️ Be Careful with Function Inputs\n\n\n\nDon’t rely on variables that aren’t passed into your function.\nIf your function can’t run using only its inputs, it’s not truly reusable.\n✅ Do this:\ndef compute_margin(revenue, cost):\n    return (revenue - cost) / revenue\n🚫 Not this:\ntotal_revenue = 1000\ndef compute_margin(cost):\n    return (total_revenue - cost) / total_revenue  \n    # works in notebook, breaks in module\n\n\n\nDecide on return values.\n\nAdd a if __name__ == \"__main__\": for testing at the bottom of finratios.py, such as:\n\nif __name__ == \"__main__\":\n    # Simple test cases\n    print(compute_pe_ratio(1000000, 50000, 30))",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Develop an app with `streamlit`</span>"
     ]
@@ -193,20 +203,50 @@
     "objectID": "streamlit.html#learn-a-bit-about-streamlit",
     "href": "streamlit.html#learn-a-bit-about-streamlit",
     "title": "3  Develop an app with streamlit",
-    "section": "3.3 Learn a bit about Streamlit",
-    "text": "3.3 Learn a bit about Streamlit\n\n\n\n\n\n\nTipQuestions that I should ask myself\n\n\n\n\nWhat is Streamlit, and where can I find its API reference and official documentation?\nWhat can Streamlit do — what kinds of apps or problems is it best at solving?\nWhat small examples or experiments can I build to quickly discover and learn its core features?\n\n\n\n\nStart with the official docs and examples — skim the Streamlit docs homepage and gallery to get a mental map of what’s possible before diving into code.\nLearn by doing small experiments — build micro-apps (e.g., one with a button, one with a chart) to turn reading into muscle memory.\nRead code, not just tutorials — explore community demos or open-source Streamlit apps to see how others structure layouts, manage state, and handle inputs.\nIterate with feedback loops — run streamlit run app.py often and tweak one thing at a time; immediate visual feedback accelerates understanding.\nReflect and generalize — after each mini-project, note what patterns repeat (e.g., sidebar widgets, caching, layout control) to build knowledge for future tools.",
+    "section": "3.4 Learn a bit about Streamlit",
+    "text": "3.4 Learn a bit about Streamlit\n\n\n\n\n\n\nTip\n\n\n\nYou don’t know what Streamlit can do. Streamlit doesn’t know what you want.\nBut, we’ve gotta start somewhere.\nSo let’s learn a bit. Once you know what it can do,\nyou’ll finally know what you can make it do (with AI’s help).\n\n\n\n\n\n\n\n\nTipHow learn to use a new Python package?\n\n\n\n\nWhat is Streamlit, and where is its API reference and official documentation?\nWhat can Streamlit do — what kinds of apps or problems is it best at solving?\nWhat small examples or experiments can I build to quickly discover and learn its core features?\n\n\n\n\nStart with the official docs and examples — skim the Streamlit docs homepage and gallery to get a mental map of what’s possible before diving into code.\nLearn by doing small experiments — build micro-apps (e.g., one with a button, one with a chart) to turn reading into muscle memory.\n\nE.g., create app1.py, app2.py files each to test and run some micro streamlit apps.\n\nRead code, not just tutorials — explore community demos or open-source Streamlit apps to see how others structure layouts, manage state, and handle inputs.\nIterate with feedback loops — run streamlit run app.py often and tweak one thing at a time; immediate visual feedback accelerates understanding.\nReflect and generalize — after each mini-project, note what patterns repeat (e.g., sidebar widgets, caching, layout control) to build knowledge for future tools.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Develop an app with `streamlit`</span>"
     ]
   },
   {
-    "objectID": "streamlit.html#vibe-coding-with-github-copilot-agent",
-    "href": "streamlit.html#vibe-coding-with-github-copilot-agent",
+    "objectID": "streamlit.html#build-a-streamlit-app",
+    "href": "streamlit.html#build-a-streamlit-app",
     "title": "3  Develop an app with streamlit",
-    "section": "3.4 Vibe Coding with Github Copilot Agent",
-    "text": "3.4 Vibe Coding with Github Copilot Agent",
+    "section": "3.5 Build a Streamlit app",
+    "text": "3.5 Build a Streamlit app\nHere is an example. Try to build a dashboard displaying the financial metrics interactively.\n\n\n\nAn Streamlit Example",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Develop an app with `streamlit`</span>"
+    ]
+  },
+  {
+    "objectID": "streamlit.html#bonus-add-an-ai-feature",
+    "href": "streamlit.html#bonus-add-an-ai-feature",
+    "title": "3  Develop an app with streamlit",
+    "section": "3.6 💡 Bonus: Add an AI Feature",
+    "text": "3.6 💡 Bonus: Add an AI Feature\nIntegrate the Google Gemini API to enhance your app with AI-powered capabilities.\n\nExplore the API\nLearn how to use the Google Gemini API and follow the setup guide to install the SDK.\nGet an API Key\nYou can obtain a free API key using your Google account.\nKeep It Secure\nNever share or publish your API key on GitHub or any public platform — treat it like a password. Delete it after use.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Develop an app with `streamlit`</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "1. Basic Command Line Crash Course",
+    "crumbs": [
+      "References"
+    ]
+  },
+  {
+    "objectID": "references.html#basic-command-line-crash-course",
+    "href": "references.html#basic-command-line-crash-course",
+    "title": "References",
+    "section": "",
+    "text": "Command Line Crash Course - Learn Python the Hard Way, Appendix A",
+    "crumbs": [
+      "References"
     ]
   }
 ]
