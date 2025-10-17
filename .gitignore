@@ -4,3 +4,6 @@
 /_site/
 /_book/
 **/*.quarto_ipynb
+readme.txt
+*.qmd
+*.bib
