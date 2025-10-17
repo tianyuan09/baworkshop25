@@ -1,9 +1,0 @@
-# References {.unnumbered}
-
-
-
-## 1. Basic Command Line Crash Course
-
-- [Command Line Crash Course](https://learnpythonthehardway.org/book/appendixa.html) - Learn Python the Hard Way, Appendix A
-
-![](images/pythonhardway.png)
