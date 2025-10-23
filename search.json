@@ -230,6 +230,106 @@
     ]
   },
   {
+    "objectID": "vscodecopilot.html",
+    "href": "vscodecopilot.html",
+    "title": "4  VS Code with Copilot Chat",
+    "section": "",
+    "text": "4.1 A Quick Recap: VS Code, Colab and Your Python Environments\nYou have used VS Code with Copilot in Github codespaces to develop a dashboard app. Let’s recap on a few basics based on your experience.\nYou also can set up the same development environment in your local PC. You will need to install multiple softwares and tools, such as Python, VS Code, Python extension in VS Code, and each python package that you might use (such as pandas).",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>VS Code with Copilot Chat</span>"
+    ]
+  },
+  {
+    "objectID": "vscodecopilot.html#a-quick-recap-vs-code-colab-and-your-python-environments",
+    "href": "vscodecopilot.html#a-quick-recap-vs-code-colab-and-your-python-environments",
+    "title": "4  VS Code with Copilot Chat",
+    "section": "",
+    "text": "Each Github Codespace runs on a Linux virtual machine that already has tools like Python, Jupyter Notebook support, various packages, and VS Code (via the web interface) preinstalled. When you open a Codespace, you’re actually using VS Code running in your browser, connected to that remote Linux machine. So:\n\nCodespaces = a Linux system in the cloud + Python + JupyterLab + various Python packages + VS Code (IDE interface).\n\nEach Google Colab notebook, on the other hand, also provides a Linux-based environment with Python and Jupyter Notebooks, but it doesn’t include VS Code.\n\nColab = a Linux system in the cloud + Python + JupyterLab + various python packages.\n\n\n\n\n\n\n\n\nNoteWhy VS Code is not in Colab Notebook?\n\n\n\nVS Code is a Microsoft product, while Colab is a Google product — and it’s unlikely Google would integrate a direct competitor’s tool into its own cloud platform.\n\n\n\n\n\n\n\n\n\n\n\nEnvironment\nWhat it includes\nNotes\n\n\n\n\nCodespaces\nLinux + Python + Jupyter + various packages + VS Code (web)\nCloud-hosted; nothing to install locally; runs VS code interface\n\n\nColab\nLinux + Python + Jupyter + various packages\nCloud-hosted; focuses on notebook interface\n\n\nLocal PC\nWhatever you install (Python, VS Code, Jupyter)\nRuns directly on your machine",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>VS Code with Copilot Chat</span>"
+    ]
+  },
+  {
+    "objectID": "vscodecopilot.html#github-copilot-and-copilot-chat-ask-edit-and-agent-modes",
+    "href": "vscodecopilot.html#github-copilot-and-copilot-chat-ask-edit-and-agent-modes",
+    "title": "4  VS Code with Copilot Chat",
+    "section": "4.2 GitHub Copilot and Copilot Chat: Ask, Edit and Agent Modes",
+    "text": "4.2 GitHub Copilot and Copilot Chat: Ask, Edit and Agent Modes\nYou have used Copilot on Day 1 for development of a dashboard using streamlit. let’s review features of GitHub Copilot and Copilot Chat.\nGitHub Copilot comes with four distant modes that you may use:\n\nInline Chat or suggestions: quick in-context code suggestions directly within VS Code using shortcuts ⌘+I or Ctrl+I.\n\n\n\nAsk Mode: best for Q&A. Highlight some code, then ask Copilot questions about its logic, purpose, or braistorm ideas implementation.\nEdit Mode: give you inline, review-ready code edits across the files.\nAgent Mode: an autonomous mode where Copilot analyzes context (e.g., files in your workspace) and performs tasks based on your request.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>VS Code with Copilot Chat</span>"
+    ]
+  },
+  {
+    "objectID": "vscodecopilot.html#tips-for-using-the-copilot-agent-mode",
+    "href": "vscodecopilot.html#tips-for-using-the-copilot-agent-mode",
+    "title": "4  VS Code with Copilot Chat",
+    "section": "4.3 Tips for Using the Copilot Agent Mode",
+    "text": "4.3 Tips for Using the Copilot Agent Mode\nTo get the best results in Agent Mode, you can provide additional context or use special commands to guide Copilot about what you want it to do.\n\n\n\n\n\n\nNoteWhat is “Context”?\n\n\n\nContext is the information you give Copilot so it understands what you’re working on and can respond more accurately. In Agent Mode, context can include the code you’ve selected, other .py files, or any extra notes you write with #.\n\n\n\nHighlight code (e.g., line 57-59 of the vscodecopilot.qmd file) in the file will automatically add those lines of code in the context (see Figure 4.1)\nAdd context with #. Add additional files that you want Copilot to read before completing the task.\ncommands with /. E.g. /explain is a command asking for explanation of the code.\n\n\n\n\n\n\n\nFigure 4.1: Highlight code, or add contexts or commands",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>VS Code with Copilot Chat</span>"
+    ]
+  },
+  {
+    "objectID": "vscodecopilot.html#reflections-on-ai-in-development-workflows",
+    "href": "vscodecopilot.html#reflections-on-ai-in-development-workflows",
+    "title": "4  VS Code with Copilot Chat",
+    "section": "4.4 Reflections on AI in Development Workflows",
+    "text": "4.4 Reflections on AI in Development Workflows\n\n4.4.1 Vibe-coding vs AI-assisted Coding\nOn Day 1, if you used Agent Mode in Copilot to build your Streamlit app — without reading or understanding any of the code — you were vibe-coding. You relied on the AI to produce something that looked right without knowing how it actually worked.\nHowever, if you read, wrote, or edited the code while building the app, you were doing AI-assisted coding — working with the AI to shape logic, fix bugs, and design structure.\n\n\n\n\n\n\n\n\nAspect\nVibe Coding\nAI-Assisted Coding\n\n\n\n\nDefinition\nA no-code workflow where you don’t read, write, or edit code. You simply test the prototype or app to see if it meets your design or intent.\nA coding workflow where you interact with and modify code using AI tools like Copilot’s Ask, Edit, or Inline Chat.\n\n\nGoal\nValidate the “vibe” — check if the prototype looks, feels, and behaves as intended.\nBuild, refine, and ship production-ready features with AI support.\n\n\nUser Interaction\nNo direct code manipulation — focus is on results, not implementation.\nActively generate, read, edit, debug, and review code and suggestions with AI\n\n\nAI Tools\nGitHub Copilot Agent Mode\nGitHub Copilot Ask Mode, Edit Mode, Inline Chat\n\n\nMindset\n“I don’t care how it’s built — does it look and work as intended?”\n“I’ll collaborate with AI to understand, fix, or enhance the code.”\n\n\nBest For\nRapid prototyping, early design validation\nFull-cycle software or data product development: feature implementation, optimization, and maintenance.\n\n\nLimitations.\nIgnores the complexity, lacks of consideration over performance, scalability, and maintainability.\nSupports real data engineering work but still requires developer understanding and validation\n\n\n\n\nI was vibe-coding\nI was doing AI-assisted coding\n\nBoth Vibe-coding and AI-assisted coding have their place in development. Use vibe-coding for quick validation and prototyping, and AI-assisted coding for building robust, production-ready data science solutions.\nAlthough vibe-coding feels exciting, you can’t rely on it from prototype to production, as it often makes mistakes or produces “shit code” — duplicated logic, buggy and insecure implementations, and tangled features no one dares to maintain. In data science, that might look like a notebook full of hard-coded file paths, random seeds, and global variables — impossible to reproduce or scale.\n\nAlso, don’t fool yourself into thinking you’re learning to code while working in Agent Mode — you’re NOT building the skills yourself. You can’t learn guitar just by watching someone else play, and you can’t learn piano by watching performances. Likewise, you can’t truly learn programming just by watching an Agent write code for you. The craft lies in understanding, experimenting, and making mistakes. That’s how you move from vibe-coding prototypes to engineered, production-ready solutions.\n\n\n4.4.2 Why the Basics Still Matters?\n\nWhy isn’t vibe coding enough for real-world data science projects?\n\nWhile vibe coding can accelerate prototyping and help non-technical users validate design ideas, it often overlooks many critical aspects of data engineering — such as scalability, performance, maintainability, and security. Building reliable data science solution or product remains a complex, multi-layered process that requires thoughtful coding, testing, and collaboration between designers, developers, and AI tools.\n\n\n\n\n\n\nImportantBest tip for using AI:\n\n\n\nStay focused on what really matters — let AI speed up the work, but make sure you’re the one driving the direction, decisions, and understanding.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>VS Code with Copilot Chat</span>"
+    ]
+  },
+  {
+    "objectID": "aifeature.html",
+    "href": "aifeature.html",
+    "title": "5  Build Applications with LLMs and AI Agents",
+    "section": "",
+    "text": "5.1 Understanding API vs. Chat in AI Tools\nMany of you have already used AI chat tools like ChatGPT or Gemini Chat to ask questions, write code snippets, or brainstorm ideas. That’s the user experience — you’re communicating with the model to get answers.\nBut when you start using LLMs and AI agents for development, the perspective changes completely. Instead of talking to the AI, you’re now building with it. You’re no longer just a user — you become a developer who leverages the model’s power through APIs to create tools, automate workflows, or build intelligent apps.\nThe table below compares OpenAI’s ChatGPT and Google’s Gemini platforms, highlighting the difference between their APIs (used by developers to build applications) and their chat interfaces (used by end users to interact with the models).",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Build Applications with LLMs and AI Agents</span>"
+    ]
+  },
+  {
+    "objectID": "aifeature.html#understanding-api-vs.-chat-in-ai-tools",
+    "href": "aifeature.html#understanding-api-vs.-chat-in-ai-tools",
+    "title": "5  Build Applications with LLMs and AI Agents",
+    "section": "",
+    "text": "Aspect\nOpenAI API\nChatGPT (OpenAI)\nGemini API\nGemini Chat\n\n\n\n\nType\nDeveloper API\nChat Interface\nDeveloper API\nChat Interface\n\n\nPurpose\nBuild apps or tools using GPT models (e.g., GPT-4).\nChat directly with GPT models for writing, coding, or learning.\nBuild apps or workflows using Gemini models.\nChat naturally with Gemini for assistance or ideas.\n\n\nHow It’s Used\nThrough code (Python, JS, etc.).\nThrough a chat interface (web or app).\nThrough code (Google AI Studio or Vertex AI).\nThrough chat (Gemini web app, Workspace integration).\n\n\nUsers\nDevelopers, researchers.\nGeneral users, educators, professionals.\nDevelopers, data teams.\nStudents, creators, general users.\n\n\nExample Use\nA developer calls GPT-4 via API to generate summaries or analyze data.\nYou ask “Explain this regression code.”\nA data app uses Gemini API to summarize Google Sheets data.\nYou ask Gemini, “Visualize this dataset for me.”\n\n\nOutput Control\nFully customizable — responses formatted via code.\nNatural text output in chat.\nFully customizable — can return text, JSON, or structured data.\nConversational responses, plain text or visuals.\n\n\nGoal\nBuild with the model.\nTalk to the model.\nBuild with the model.\nTalk to the model.\n\n\n\n\n\n\n\n\n\nWarningSummary\n\n\n\n\nAPIs are for developers — you use them to build apps with AI features for the end users.\nChat tools are for the end users — you chat with the model to get answers.\nOpenAI powers ChatGPT; Google powers Gemini; different ecosystems.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Build Applications with LLMs and AI Agents</span>"
+    ]
+  },
+  {
+    "objectID": "aifeature.html#lab-enhance-your-app-with-llm-powered-interpretation",
+    "href": "aifeature.html#lab-enhance-your-app-with-llm-powered-interpretation",
+    "title": "5  Build Applications with LLMs and AI Agents",
+    "section": "5.2 Lab: Enhance Your App with LLM-Powered Interpretation",
+    "text": "5.2 Lab: Enhance Your App with LLM-Powered Interpretation\nIn this lab, you will continue building your financial dashboard by integrating AI features with Google Gemini API.\n\n5.2.1 Get Started with Gemini API\nPlease sign in to Google AI Studio using your Google account https://ai.google.dev/aistudio.\n\n\n5.2.2 Create your Google Gemini API Key\nGoogle has a free tier for the Gemini API that provides limited usage for development and experimentation.\nYou can obtain a free API key using your Google account:\n\nhttps://aistudio.google.com/api-keys\n\n\nPlease delete your key if not in use. Keep it secure, and never share or publish your key.\n\n\n5.2.3 Run A Simple Gemini Use Case\nCheck out the page &lt;https://aistudio.google.com/app/&gt; for a simple use case of how to use Gemini API. You can easily create a Colab notebook and test the sample code there — since both Gemini and Colab are Google products, they integrate seamlessly for quick experimentation.\nYou only need to modidy the following line with your api_key to run the sample code.\nclient = genai.Client(api_key=\"your_actual_api_key_here\")\n\nI successfully tested the Gemini Use Case.\n\n\n\n5.2.4 Prompt engineering\nA prompt is the input text or query given to a generative AI model to instruct it on what to do.\n\ne.g., “Write a Python function to calculate the average of a list.”\n\nIn simple terms, prompt engineering is about communicating effectively with AI. It’s the skill of writing prompts so the large language models (LLMs) understands your intent, context, and background, and can respond accurately and usefully.\nIn other words:\n\nPrompt engineering = communication skills with LLMs.\n\n\n\n\n\n\n\nNote\n\n\n\nYou can explore prompt ideas for the Gemini API in Google AI studio. https://ai.google.dev/gemini-api/prompts\n\n\n\n\n5.2.5 Bad vs Good Prompts\nHere is a number of examples showing how vague prompts differs from well-engineered ones. AI can understand and act only as well as you communicate.\n\n\n\n\n\n\n\n\n\nTask\nBad Prompt\nGood Prompt\nWhy It’s Better\n\n\n\n\nAsk for code\n“Write some Python code for data.”\n“Write a Python function using pandas to read a CSV file, clean missing values, and calculate the average of each column.”\nGives clear context, specific goal, and tools to use.\n\n\nExplain concept\n“Explain machine learning.”\n“Explain what machine learning is for a high school student using everyday examples.”\nSpecifies audience and tone, making the response more focused.\n\n\nGenerate text\n“Write about climate change.”\n“Write a 3-paragraph summary of climate change causes and impacts, suitable for a classroom presentation.”\nDefines length, scope, and audience.\n\n\nData science task\n“Analyze this dataset.”\n“Analyze this dataset to find the top 5 products by sales, and visualize the trend over time using matplotlib.”\nSpecifies the goal, method, and output format.\n\n\n\nFunction to Get AI Interpretation of the Z-Score\n\n\n5.2.6 Task: Design a Value-Adding AI Prompt for Your Dashboard\nYour financial metrics dashboard already allows users to select tickers and view several metrics. Now, your goal is to design a prompt that integrates a LLM from Gemini to provide AI-generated insights that add value for the users of the dashboard.\n\nDesign your prompt with clear intent and context.\n\nThe prompt should generate something useful for the dashboard user.\nIntegrate your prompt into your streamlit app. You can build on the simple use case you successfully tested earlier and try integrating it into your streamlit app using Copilot.\nTest your prompt in the dashboard to ensure it gives clear, relevant, and user-friendly outputs.\nDocument why your prompt adds value and how it helps users make better sense of the data.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Build Applications with LLMs and AI Agents</span>"
+    ]
+  },
+  {
+    "objectID": "aifeature.html#lab-2-add-ai-agents-to-your-dashboard-optional",
+    "href": "aifeature.html#lab-2-add-ai-agents-to-your-dashboard-optional",
+    "title": "5  Build Applications with LLMs and AI Agents",
+    "section": "5.3 Lab 2: Add AI Agents to your Dashboard (optional)",
+    "text": "5.3 Lab 2: Add AI Agents to your Dashboard (optional)\nTo be released.",
+    "crumbs": [
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Build Applications with LLMs and AI Agents</span>"
+    ]
+  },
+  {
+    "objectID": "metrics.html",
+    "href": "metrics.html",
+    "title": "6  Lab - Business Metrics Dashboard",
+    "section": "",
+    "text": "Day 2",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Lab - Business Metrics Dashboard</span>"
+    ]
+  },
+  {
     "objectID": "references.html",
     "href": "references.html",
     "title": "References",
