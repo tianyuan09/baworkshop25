@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>6&nbsp; Lab - Business Metrics Dashboard – Business Analytics Workshop</title>
+<title>6&nbsp; Lab - Business Metrics Practice – Business Analytics Workshop</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -83,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./metrics.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lab - Business Metrics Dashboard</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./metrics.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lab - Business Metrics Practice</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -149,7 +184,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./metrics.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lab - Business Metrics Dashboard</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lab - Business Metrics Practice</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -169,15 +204,31 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#requirements" id="toc-requirements" class="nav-link active" data-scroll-target="#requirements"><span class="header-section-number">6.1</span> Requirements</a></li>
+  <li><a href="#recommended-workflow" id="toc-recommended-workflow" class="nav-link" data-scroll-target="#recommended-workflow"><span class="header-section-number">6.2</span> Recommended Workflow</a>
+  <ul class="collapse">
+  <li><a href="#step-1.rapid-eda-in-a-.ipynb" id="toc-step-1.rapid-eda-in-a-.ipynb" class="nav-link" data-scroll-target="#step-1.rapid-eda-in-a-.ipynb">Step 1.Rapid EDA in a .ipynb</a></li>
+  <li><a href="#step-2.-refactor-into-a-.py-metrics-module" id="toc-step-2.-refactor-into-a-.py-metrics-module" class="nav-link" data-scroll-target="#step-2.-refactor-into-a-.py-metrics-module">Step 2. Refactor into a .py metrics module</a></li>
+  <li><a href="#step-3.-import-the-module-and-design-the-streamlit-ui" id="toc-step-3.-import-the-module-and-design-the-streamlit-ui" class="nav-link" data-scroll-target="#step-3.-import-the-module-and-design-the-streamlit-ui">Step 3. Import the module and design the Streamlit UI</a></li>
+  </ul></li>
+  <li><a href="#project-folder-structure" id="toc-project-folder-structure" class="nav-link" data-scroll-target="#project-folder-structure"><span class="header-section-number">6.3</span> Project Folder Structure</a>
+  <ul class="collapse">
+  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission"><span class="header-section-number">6.3.1</span> Submission</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lab - Business Metrics Dashboard</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lab - Business Metrics Practice</span></h1>
 </div>
 
 
@@ -194,9 +245,81 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Day 2</p>
+<p>Please download and read the case package on Canvas.</p>
+<p><img src="images/day2lab.png" class="img-fluid"></p>
+<p>The goal of this in-class project is to <strong>look at a few ad campaigns, analyze their current performance, and create a dashboard to report the key business metrics</strong>.</p>
+<section id="requirements" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="requirements"><span class="header-section-number">6.1</span> Requirements</h2>
+<p>From a business perspective, specifically, you are asked to:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Identify critical business metrics and distinguish them from mere data (5 points)</label></li>
+<li><label><input type="checkbox">Calculate the metrics that are important and worth reporting (5 points)</label></li>
+<li><label><input type="checkbox">Design a streamlit dashboard to display these metrics interactively (5 points)</label></li>
+<li><label><input type="checkbox">Include explanations alongside each metric using text components (5 points)</label>
+<ul>
+<li>Ensure users understand what each metric represents and how it reflects overall business performance.</li>
+<li>In short, <strong>don’t just calculate metrics — demonstrate that you can interpret their meaning and implications for decision-making</strong>.</li>
+</ul></li>
+<li><label><input type="checkbox">Explanations can be dynamically generated using an AI-powered feature. If you implement this, you’ll earn 5 points for AI integration. (5 points)</label></li>
+<li><label><input type="checkbox">Clean and well-organized code following the recommended workflow below. (5 points)</label></li>
+</ul>
+</section>
+<section id="recommended-workflow" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="recommended-workflow"><span class="header-section-number">6.2</span> Recommended Workflow</h2>
+<p>A structured workflow helps you move efficiently from exploration to production. It turns messy experimentation into reproducible, professional pipelines for real-world data projects.</p>
+<section id="step-1.rapid-eda-in-a-.ipynb" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="step-1.rapid-eda-in-a-.ipynb">Step 1.Rapid EDA in a .ipynb</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Create and Use a <code>eda.ipynb</code> notebook to inspect data quality, clean data, develop metrics, test feature ideas, and prototype formulas and metrics. <strong>No need to do predictive modeling</strong>.</label></li>
+</ul>
+</section>
+<section id="step-2.-refactor-into-a-.py-metrics-module" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="step-2.-refactor-into-a-.py-metrics-module">Step 2. Refactor into a .py metrics module</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">Move code (cleaning, feature engineering, metric formulas) from the notebook into functions in <code>metrics_utils.py</code>. Add docstrings, type hints, and tests.</label></li>
+</ul>
+</section>
+<section id="step-3.-import-the-module-and-design-the-streamlit-ui" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="step-3.-import-the-module-and-design-the-streamlit-ui">Step 3. Import the module and design the Streamlit UI</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">In <code>app.py</code>, <code>import metrics_utils</code>, design and build a streamlit app that display key metrics that you identified. Choose proper features in the streamlit.</label></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Why this workflow works (the rationale)?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Mirrors the real development cycle</strong>: notebooks for <em>development and experimentation</em>, <code>.py</code> modules for <em>stable logic ready for release</em>, and Streamlit for <em>production presentation</em>.</li>
+<li><strong>Reusability</strong>: Metric functions can be reused across future apps and analyses.</li>
+<li><strong>Testability</strong>: Logic in <code>.py</code> is easy to test (if <strong>name</strong> == “<strong>main</strong>”:).</li>
+<li><strong>Maintainability</strong>: Update formulas once in the module, not in multiple places.</li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+<section id="project-folder-structure" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="project-folder-structure"><span class="header-section-number">6.3</span> Project Folder Structure</h2>
+<p>create a <code>adsanalyses</code> folder in your home directory with the files structured below.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># suggested folder structure under your home directory</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">adsanalyses/</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">├─</span> eda.ipynb        <span class="co"># your EDA</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">├─</span> metrics_utils.py <span class="co"># functions for load data, and calculating metrics</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">├─</span> app.py           <span class="co"># your streamlit app</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ex">└─</span> ad_table.csv</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="submission" class="level3" data-number="6.3.1">
+<h3 data-number="6.3.1" class="anchored" data-anchor-id="submission"><span class="header-section-number">6.3.1</span> Submission</h3>
+<p>Follow the instruction of the In-class Quiz.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

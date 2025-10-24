@@ -184,7 +184,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./metrics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lab - Business Metrics Dashboard</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lab - Business Metrics Practice</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -214,12 +214,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#get-started-with-gemini-api" id="toc-get-started-with-gemini-api" class="nav-link" data-scroll-target="#get-started-with-gemini-api"><span class="header-section-number">5.2.1</span> Get Started with Gemini API</a></li>
   <li><a href="#create-your-google-gemini-api-key" id="toc-create-your-google-gemini-api-key" class="nav-link" data-scroll-target="#create-your-google-gemini-api-key"><span class="header-section-number">5.2.2</span> Create your Google Gemini API Key</a></li>
-  <li><a href="#run-a-simple-gemini-use-case" id="toc-run-a-simple-gemini-use-case" class="nav-link" data-scroll-target="#run-a-simple-gemini-use-case"><span class="header-section-number">5.2.3</span> Run A Simple Gemini Use Case</a></li>
+  <li><a href="#lab-run-a-simple-gemini-use-case" id="toc-lab-run-a-simple-gemini-use-case" class="nav-link" data-scroll-target="#lab-run-a-simple-gemini-use-case"><span class="header-section-number">5.2.3</span> Lab: Run A Simple Gemini Use Case</a></li>
   <li><a href="#prompt-engineering" id="toc-prompt-engineering" class="nav-link" data-scroll-target="#prompt-engineering"><span class="header-section-number">5.2.4</span> Prompt engineering</a></li>
   <li><a href="#bad-vs-good-prompts" id="toc-bad-vs-good-prompts" class="nav-link" data-scroll-target="#bad-vs-good-prompts"><span class="header-section-number">5.2.5</span> Bad vs Good Prompts</a></li>
-  <li><a href="#task-design-a-value-adding-ai-prompt-for-your-dashboard" id="toc-task-design-a-value-adding-ai-prompt-for-your-dashboard" class="nav-link" data-scroll-target="#task-design-a-value-adding-ai-prompt-for-your-dashboard"><span class="header-section-number">5.2.6</span> Task: Design a Value-Adding AI Prompt for Your Dashboard</a></li>
+  <li><a href="#lab-design-a-value-adding-ai-prompt-for-your-dashboard" id="toc-lab-design-a-value-adding-ai-prompt-for-your-dashboard" class="nav-link" data-scroll-target="#lab-design-a-value-adding-ai-prompt-for-your-dashboard"><span class="header-section-number">5.2.6</span> Lab: Design a Value-Adding AI Prompt for Your Dashboard</a></li>
   </ul></li>
-  <li><a href="#lab-2-add-ai-agents-to-your-dashboard-optional" id="toc-lab-2-add-ai-agents-to-your-dashboard-optional" class="nav-link" data-scroll-target="#lab-2-add-ai-agents-to-your-dashboard-optional"><span class="header-section-number">5.3</span> Lab 2: Add AI Agents to your Dashboard (optional)</a></li>
+  <li><a href="#lab-add-an-ai-agent-to-your-dashboard-optional" id="toc-lab-add-an-ai-agent-to-your-dashboard-optional" class="nav-link" data-scroll-target="#lab-add-an-ai-agent-to-your-dashboard-optional"><span class="header-section-number">5.3</span> Lab: Add an AI Agent to your Dashboard (optional)</a></li>
   </ul>
 </nav>
     </div>
@@ -248,7 +248,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="understanding-api-vs.-chat-in-ai-tools" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="understanding-api-vs.-chat-in-ai-tools"><span class="header-section-number">5.1</span> Understanding API vs.&nbsp;Chat in AI Tools</h2>
 <p>Many of you have already used <strong>AI chat tools</strong> like <strong>ChatGPT</strong> or <strong>Gemini Chat</strong> to ask questions, write code snippets, or brainstorm ideas. That’s the <em>user</em> experience — you’re communicating with the model to get answers.</p>
-<p>But when you start using <strong>LLMs and AI agents for development</strong>, the perspective changes completely. Instead of <em>talking to</em> the AI, you’re now <em>building with</em> it. You’re no longer just a user — you become a <strong>developer who leverages the model’s power through APIs</strong> to create tools, automate workflows, or build intelligent apps.</p>
+<p>But when you start using <strong>LLMs and AI agents for development</strong>, the perspective changes completely. Instead of <em>talking to</em> the AI, you’re now <em>building with</em> it. You’re no longer just a user — you become a <strong>developer who leverages the model’s power through APIs</strong> to create tools, automate workflows, or build intelligent apps for others to use.</p>
 <p>The table below compares OpenAI’s ChatGPT and Google’s Gemini platforms, highlighting the difference between their APIs (used by developers to build applications) and their chat interfaces (used by end users to interact with the models).</p>
 <table class="caption-top table">
 <colgroup>
@@ -354,8 +354,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="images/geminikey.png" class="img-fluid"></p>
 <p>Please <strong>delete your key if not in use</strong>. Keep it secure, and <strong>never share or publish your key</strong>.</p>
 </section>
-<section id="run-a-simple-gemini-use-case" class="level3" data-number="5.2.3">
-<h3 data-number="5.2.3" class="anchored" data-anchor-id="run-a-simple-gemini-use-case"><span class="header-section-number">5.2.3</span> Run A Simple Gemini Use Case</h3>
+<section id="lab-run-a-simple-gemini-use-case" class="level3" data-number="5.2.3">
+<h3 data-number="5.2.3" class="anchored" data-anchor-id="lab-run-a-simple-gemini-use-case"><span class="header-section-number">5.2.3</span> Lab: Run A Simple Gemini Use Case</h3>
 <p>Check out the page &lt;<a href="https://aistudio.google.com/app/" class="uri">https://aistudio.google.com/app/</a>&gt; for a simple use case of how to use Gemini API. You can easily create a Colab notebook and test the sample code there — since both Gemini and Colab are Google products, they integrate seamlessly for quick experimentation.</p>
 <p>You only need to modidy the following line with your <code>api_key</code> to run the sample code.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>client <span class="op">=</span> genai.Client(api_key<span class="op">=</span><span class="st">"your_actual_api_key_here"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -433,10 +433,9 @@ Note
 </tr>
 </tbody>
 </table>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Function to Get AI Interpretation of the Z-Score</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="task-design-a-value-adding-ai-prompt-for-your-dashboard" class="level3" data-number="5.2.6">
-<h3 data-number="5.2.6" class="anchored" data-anchor-id="task-design-a-value-adding-ai-prompt-for-your-dashboard"><span class="header-section-number">5.2.6</span> Task: Design a Value-Adding AI Prompt for Your Dashboard</h3>
+<section id="lab-design-a-value-adding-ai-prompt-for-your-dashboard" class="level3" data-number="5.2.6">
+<h3 data-number="5.2.6" class="anchored" data-anchor-id="lab-design-a-value-adding-ai-prompt-for-your-dashboard"><span class="header-section-number">5.2.6</span> Lab: Design a Value-Adding AI Prompt for Your Dashboard</h3>
 <p>Your financial metrics dashboard already allows users to select tickers and view several metrics. Now, your goal is to design a prompt that integrates a LLM from Gemini to provide AI-generated insights that add value for the users of the dashboard.</p>
 <ul class="task-list">
 <li><p><label><input type="checkbox">Design your prompt with clear intent and context.<br>
@@ -444,12 +443,11 @@ Note
 <li><p><label><input type="checkbox">The prompt should generate something useful for the dashboard user.</label></p></li>
 <li><p><label><input type="checkbox">Integrate your prompt into your streamlit app. You can build on the simple use case you successfully tested earlier and try integrating it into your streamlit app using Copilot.</label></p></li>
 <li><p><label><input type="checkbox">Test your prompt in the dashboard to ensure it gives clear, relevant, and user-friendly outputs.</label></p></li>
-<li><p><label><input type="checkbox">Document why your prompt adds value and how it helps users make better sense of the data.</label></p></li>
 </ul>
 </section>
 </section>
-<section id="lab-2-add-ai-agents-to-your-dashboard-optional" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="lab-2-add-ai-agents-to-your-dashboard-optional"><span class="header-section-number">5.3</span> Lab 2: Add AI Agents to your Dashboard (optional)</h2>
+<section id="lab-add-an-ai-agent-to-your-dashboard-optional" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="lab-add-an-ai-agent-to-your-dashboard-optional"><span class="header-section-number">5.3</span> Lab: Add an AI Agent to your Dashboard (optional)</h2>
 <p>To be released.</p>
 
 
@@ -863,8 +861,8 @@ Note
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./metrics.html" class="pagination-link" aria-label="Lab - Business Metrics Dashboard">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lab - Business Metrics Dashboard</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./metrics.html" class="pagination-link" aria-label="Lab - Business Metrics Practice">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Lab - Business Metrics Practice</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

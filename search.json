@@ -284,7 +284,7 @@
     "href": "aifeature.html",
     "title": "5  Build Applications with LLMs and AI Agents",
     "section": "",
-    "text": "5.1 Understanding API vs. Chat in AI Tools\nMany of you have already used AI chat tools like ChatGPT or Gemini Chat to ask questions, write code snippets, or brainstorm ideas. That’s the user experience — you’re communicating with the model to get answers.\nBut when you start using LLMs and AI agents for development, the perspective changes completely. Instead of talking to the AI, you’re now building with it. You’re no longer just a user — you become a developer who leverages the model’s power through APIs to create tools, automate workflows, or build intelligent apps.\nThe table below compares OpenAI’s ChatGPT and Google’s Gemini platforms, highlighting the difference between their APIs (used by developers to build applications) and their chat interfaces (used by end users to interact with the models).",
+    "text": "5.1 Understanding API vs. Chat in AI Tools\nMany of you have already used AI chat tools like ChatGPT or Gemini Chat to ask questions, write code snippets, or brainstorm ideas. That’s the user experience — you’re communicating with the model to get answers.\nBut when you start using LLMs and AI agents for development, the perspective changes completely. Instead of talking to the AI, you’re now building with it. You’re no longer just a user — you become a developer who leverages the model’s power through APIs to create tools, automate workflows, or build intelligent apps for others to use.\nThe table below compares OpenAI’s ChatGPT and Google’s Gemini platforms, highlighting the difference between their APIs (used by developers to build applications) and their chat interfaces (used by end users to interact with the models).",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Build Applications with LLMs and AI Agents</span>"
     ]
@@ -304,17 +304,17 @@
     "href": "aifeature.html#lab-enhance-your-app-with-llm-powered-interpretation",
     "title": "5  Build Applications with LLMs and AI Agents",
     "section": "5.2 Lab: Enhance Your App with LLM-Powered Interpretation",
-    "text": "5.2 Lab: Enhance Your App with LLM-Powered Interpretation\nIn this lab, you will continue building your financial dashboard by integrating AI features with Google Gemini API.\n\n5.2.1 Get Started with Gemini API\nPlease sign in to Google AI Studio using your Google account https://ai.google.dev/aistudio.\n\n\n5.2.2 Create your Google Gemini API Key\nGoogle has a free tier for the Gemini API that provides limited usage for development and experimentation.\nYou can obtain a free API key using your Google account:\n\nhttps://aistudio.google.com/api-keys\n\n\nPlease delete your key if not in use. Keep it secure, and never share or publish your key.\n\n\n5.2.3 Run A Simple Gemini Use Case\nCheck out the page &lt;https://aistudio.google.com/app/&gt; for a simple use case of how to use Gemini API. You can easily create a Colab notebook and test the sample code there — since both Gemini and Colab are Google products, they integrate seamlessly for quick experimentation.\nYou only need to modidy the following line with your api_key to run the sample code.\nclient = genai.Client(api_key=\"your_actual_api_key_here\")\n\nI successfully tested the Gemini Use Case.\n\n\n\n5.2.4 Prompt engineering\nA prompt is the input text or query given to a generative AI model to instruct it on what to do.\n\ne.g., “Write a Python function to calculate the average of a list.”\n\nIn simple terms, prompt engineering is about communicating effectively with AI. It’s the skill of writing prompts so the large language models (LLMs) understands your intent, context, and background, and can respond accurately and usefully.\nIn other words:\n\nPrompt engineering = communication skills with LLMs.\n\n\n\n\n\n\n\nNote\n\n\n\nYou can explore prompt ideas for the Gemini API in Google AI studio. https://ai.google.dev/gemini-api/prompts\n\n\n\n\n5.2.5 Bad vs Good Prompts\nHere is a number of examples showing how vague prompts differs from well-engineered ones. AI can understand and act only as well as you communicate.\n\n\n\n\n\n\n\n\n\nTask\nBad Prompt\nGood Prompt\nWhy It’s Better\n\n\n\n\nAsk for code\n“Write some Python code for data.”\n“Write a Python function using pandas to read a CSV file, clean missing values, and calculate the average of each column.”\nGives clear context, specific goal, and tools to use.\n\n\nExplain concept\n“Explain machine learning.”\n“Explain what machine learning is for a high school student using everyday examples.”\nSpecifies audience and tone, making the response more focused.\n\n\nGenerate text\n“Write about climate change.”\n“Write a 3-paragraph summary of climate change causes and impacts, suitable for a classroom presentation.”\nDefines length, scope, and audience.\n\n\nData science task\n“Analyze this dataset.”\n“Analyze this dataset to find the top 5 products by sales, and visualize the trend over time using matplotlib.”\nSpecifies the goal, method, and output format.\n\n\n\nFunction to Get AI Interpretation of the Z-Score\n\n\n5.2.6 Task: Design a Value-Adding AI Prompt for Your Dashboard\nYour financial metrics dashboard already allows users to select tickers and view several metrics. Now, your goal is to design a prompt that integrates a LLM from Gemini to provide AI-generated insights that add value for the users of the dashboard.\n\nDesign your prompt with clear intent and context.\n\nThe prompt should generate something useful for the dashboard user.\nIntegrate your prompt into your streamlit app. You can build on the simple use case you successfully tested earlier and try integrating it into your streamlit app using Copilot.\nTest your prompt in the dashboard to ensure it gives clear, relevant, and user-friendly outputs.\nDocument why your prompt adds value and how it helps users make better sense of the data.",
+    "text": "5.2 Lab: Enhance Your App with LLM-Powered Interpretation\nIn this lab, you will continue building your financial dashboard by integrating AI features with Google Gemini API.\n\n5.2.1 Get Started with Gemini API\nPlease sign in to Google AI Studio using your Google account https://ai.google.dev/aistudio.\n\n\n5.2.2 Create your Google Gemini API Key\nGoogle has a free tier for the Gemini API that provides limited usage for development and experimentation.\nYou can obtain a free API key using your Google account:\n\nhttps://aistudio.google.com/api-keys\n\n\nPlease delete your key if not in use. Keep it secure, and never share or publish your key.\n\n\n5.2.3 Lab: Run A Simple Gemini Use Case\nCheck out the page &lt;https://aistudio.google.com/app/&gt; for a simple use case of how to use Gemini API. You can easily create a Colab notebook and test the sample code there — since both Gemini and Colab are Google products, they integrate seamlessly for quick experimentation.\nYou only need to modidy the following line with your api_key to run the sample code.\nclient = genai.Client(api_key=\"your_actual_api_key_here\")\n\nI successfully tested the Gemini Use Case.\n\n\n\n5.2.4 Prompt engineering\nA prompt is the input text or query given to a generative AI model to instruct it on what to do.\n\ne.g., “Write a Python function to calculate the average of a list.”\n\nIn simple terms, prompt engineering is about communicating effectively with AI. It’s the skill of writing prompts so the large language models (LLMs) understands your intent, context, and background, and can respond accurately and usefully.\nIn other words:\n\nPrompt engineering = communication skills with LLMs.\n\n\n\n\n\n\n\nNote\n\n\n\nYou can explore prompt ideas for the Gemini API in Google AI studio. https://ai.google.dev/gemini-api/prompts\n\n\n\n\n5.2.5 Bad vs Good Prompts\nHere is a number of examples showing how vague prompts differs from well-engineered ones. AI can understand and act only as well as you communicate.\n\n\n\n\n\n\n\n\n\nTask\nBad Prompt\nGood Prompt\nWhy It’s Better\n\n\n\n\nAsk for code\n“Write some Python code for data.”\n“Write a Python function using pandas to read a CSV file, clean missing values, and calculate the average of each column.”\nGives clear context, specific goal, and tools to use.\n\n\nExplain concept\n“Explain machine learning.”\n“Explain what machine learning is for a high school student using everyday examples.”\nSpecifies audience and tone, making the response more focused.\n\n\nGenerate text\n“Write about climate change.”\n“Write a 3-paragraph summary of climate change causes and impacts, suitable for a classroom presentation.”\nDefines length, scope, and audience.\n\n\nData science task\n“Analyze this dataset.”\n“Analyze this dataset to find the top 5 products by sales, and visualize the trend over time using matplotlib.”\nSpecifies the goal, method, and output format.\n\n\n\n\n\n5.2.6 Lab: Design a Value-Adding AI Prompt for Your Dashboard\nYour financial metrics dashboard already allows users to select tickers and view several metrics. Now, your goal is to design a prompt that integrates a LLM from Gemini to provide AI-generated insights that add value for the users of the dashboard.\n\nDesign your prompt with clear intent and context.\n\nThe prompt should generate something useful for the dashboard user.\nIntegrate your prompt into your streamlit app. You can build on the simple use case you successfully tested earlier and try integrating it into your streamlit app using Copilot.\nTest your prompt in the dashboard to ensure it gives clear, relevant, and user-friendly outputs.",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Build Applications with LLMs and AI Agents</span>"
     ]
   },
   {
-    "objectID": "aifeature.html#lab-2-add-ai-agents-to-your-dashboard-optional",
-    "href": "aifeature.html#lab-2-add-ai-agents-to-your-dashboard-optional",
+    "objectID": "aifeature.html#lab-add-an-ai-agent-to-your-dashboard-optional",
+    "href": "aifeature.html#lab-add-an-ai-agent-to-your-dashboard-optional",
     "title": "5  Build Applications with LLMs and AI Agents",
-    "section": "5.3 Lab 2: Add AI Agents to your Dashboard (optional)",
-    "text": "5.3 Lab 2: Add AI Agents to your Dashboard (optional)\nTo be released.",
+    "section": "5.3 Lab: Add an AI Agent to your Dashboard (optional)",
+    "text": "5.3 Lab: Add an AI Agent to your Dashboard (optional)\nTo be released.",
     "crumbs": [
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Build Applications with LLMs and AI Agents</span>"
     ]
@@ -322,11 +322,41 @@
   {
     "objectID": "metrics.html",
     "href": "metrics.html",
-    "title": "6  Lab - Business Metrics Dashboard",
+    "title": "6  Lab - Business Metrics Practice",
     "section": "",
-    "text": "Day 2",
+    "text": "6.1 Requirements\nPlease download and read the case package on Canvas.\nThe goal of this in-class project is to look at a few ad campaigns, analyze their current performance, and create a dashboard to report the key business metrics.\nFrom a business perspective, specifically, you are asked to:",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Lab - Business Metrics Dashboard</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Lab - Business Metrics Practice</span>"
+    ]
+  },
+  {
+    "objectID": "metrics.html#requirements",
+    "href": "metrics.html#requirements",
+    "title": "6  Lab - Business Metrics Practice",
+    "section": "",
+    "text": "Identify critical business metrics and distinguish them from mere data (5 points)\nCalculate the metrics that are important and worth reporting (5 points)\nDesign a streamlit dashboard to display these metrics interactively (5 points)\nInclude explanations alongside each metric using text components (5 points)\n\nEnsure users understand what each metric represents and how it reflects overall business performance.\nIn short, don’t just calculate metrics — demonstrate that you can interpret their meaning and implications for decision-making.\n\nExplanations can be dynamically generated using an AI-powered feature. If you implement this, you’ll earn 5 points for AI integration. (5 points)\nClean and well-organized code following the recommended workflow below. (5 points)",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Lab - Business Metrics Practice</span>"
+    ]
+  },
+  {
+    "objectID": "metrics.html#recommended-workflow",
+    "href": "metrics.html#recommended-workflow",
+    "title": "6  Lab - Business Metrics Practice",
+    "section": "6.2 Recommended Workflow",
+    "text": "6.2 Recommended Workflow\nA structured workflow helps you move efficiently from exploration to production. It turns messy experimentation into reproducible, professional pipelines for real-world data projects.\n\nStep 1.Rapid EDA in a .ipynb\n\nCreate and Use a eda.ipynb notebook to inspect data quality, clean data, develop metrics, test feature ideas, and prototype formulas and metrics. No need to do predictive modeling.\n\n\n\nStep 2. Refactor into a .py metrics module\n\nMove code (cleaning, feature engineering, metric formulas) from the notebook into functions in metrics_utils.py. Add docstrings, type hints, and tests.\n\n\n\nStep 3. Import the module and design the Streamlit UI\n\nIn app.py, import metrics_utils, design and build a streamlit app that display key metrics that you identified. Choose proper features in the streamlit.\n\n\n\n\n\n\n\nNoteWhy this workflow works (the rationale)?\n\n\n\n\nMirrors the real development cycle: notebooks for development and experimentation, .py modules for stable logic ready for release, and Streamlit for production presentation.\nReusability: Metric functions can be reused across future apps and analyses.\nTestability: Logic in .py is easy to test (if name == “main”:).\nMaintainability: Update formulas once in the module, not in multiple places.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Lab - Business Metrics Practice</span>"
+    ]
+  },
+  {
+    "objectID": "metrics.html#project-folder-structure",
+    "href": "metrics.html#project-folder-structure",
+    "title": "6  Lab - Business Metrics Practice",
+    "section": "6.3 Project Folder Structure",
+    "text": "6.3 Project Folder Structure\ncreate a adsanalyses folder in your home directory with the files structured below.\n# suggested folder structure under your home directory\nadsanalyses/\n├─ eda.ipynb        # your EDA\n├─ metrics_utils.py # functions for load data, and calculating metrics\n├─ app.py           # your streamlit app\n└─ ad_table.csv\n\n6.3.1 Submission\nFollow the instruction of the In-class Quiz.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Lab - Business Metrics Practice</span>"
     ]
   },
   {
