@@ -344,37 +344,7 @@
     "href": "metrics.html#lab-business-metrics-dashboard",
     "title": "6  Lab - Business Metrics Practice",
     "section": "6.2 Lab: Business Metrics Dashboard",
-    "text": "6.2 Lab: Business Metrics Dashboard\nPlease download and read the case package on Canvas.\n\nThe goal of this in-class project is to look at a few ad campaigns, analyze their current performance, identify key business metrics and create a dashboard to report them.",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Lab - Business Metrics Practice</span>"
-    ]
-  },
-  {
-    "objectID": "metrics.html#requirements",
-    "href": "metrics.html#requirements",
-    "title": "6  Lab - Business Metrics Practice",
-    "section": "6.3 Requirements",
-    "text": "6.3 Requirements\nFrom a business perspective, specifically, you are asked to:\n\nIdentify critical business metrics and distinguish them from mere data (5 points)\nCalculate the metrics that are important and worth reporting (5 points)\nDesign a streamlit dashboard to display these metrics interactively (5 points)\nInclude explanations alongside each metric using text components (5 points)\n\nEnsure users understand what each metric represents and how it reflects overall business performance.\nIn short, don’t just calculate metrics — demonstrate that you can interpret their meaning and implications for decision-making.\nExplanations can be dynamically generated using an AI-powered feature.\n\nClean and well-organized code following the recommended workflow below. (5 points)",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Lab - Business Metrics Practice</span>"
-    ]
-  },
-  {
-    "objectID": "metrics.html#recommended-workflow",
-    "href": "metrics.html#recommended-workflow",
-    "title": "6  Lab - Business Metrics Practice",
-    "section": "6.4 Recommended Workflow",
-    "text": "6.4 Recommended Workflow\nA structured workflow helps you move efficiently from exploration to production. It turns messy experimentation into reproducible, professional pipelines for real-world data projects.\n\nStep 1.Rapid EDA in a .ipynb\n\nCreate and Use a eda.ipynb notebook to inspect data quality, clean data, develop metrics, test feature ideas, and prototype formulas and metrics. No need to do predictive modeling.\n\n\n\nStep 2. Refactor into a .py metrics module\n\nMove code (cleaning, feature engineering, metric formulas) from the notebook into functions in metrics_utils.py. Add docstrings, type hints, and tests.\n\n\n\nStep 3. Import the module and design the Streamlit UI\n\nIn app.py, import metrics_utils, design and build a streamlit app that display key metrics that you identified. Choose proper features in the streamlit.\n\n\n\n\n\n\n\nNoteWhy this workflow works (the rationale)?\n\n\n\n\nMirrors the real development cycle: notebooks for development and experimentation, .py modules for stable logic ready for release, and Streamlit for production presentation.\nReusability: Metric functions can be reused across future apps and analyses.\nTestability: Logic in .py is easy to test (if name == “main”:).\nMaintainability: Update formulas once in the module, not in multiple places.",
-    "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Lab - Business Metrics Practice</span>"
-    ]
-  },
-  {
-    "objectID": "metrics.html#project-folder-structure",
-    "href": "metrics.html#project-folder-structure",
-    "title": "6  Lab - Business Metrics Practice",
-    "section": "6.5 Project Folder Structure",
-    "text": "6.5 Project Folder Structure\ncreate a adsanalyses folder in your home directory with the files structured below.\n# suggested folder structure under your home directory\nadsanalyses/\n├─ eda.ipynb        # your EDA\n├─ metrics_utils.py # functions for load data, and calculating metrics\n├─ app.py           # your streamlit app\n└─ ad_table.csv\n\n6.5.1 Submission\nFollow the instruction of the In-class Quiz.",
+    "text": "6.2 Lab: Business Metrics Dashboard\nPlease download and read the case package on Canvas.\n\nThe goal of this in-class project is to look at a few ad campaigns, analyze their current performance, identify key business metrics and create a dashboard to report them.\n\n6.2.1 Requirements\nFrom a business perspective, specifically, you are asked to:\n\nIdentify critical business metrics and distinguish them from mere data (5 points)\nCalculate the metrics that are important and worth reporting (5 points)\nDesign a streamlit dashboard to display these metrics interactively (5 points)\nInclude explanations alongside each metric using text components (5 points)\n\nEnsure users understand what each metric represents and how it reflects overall business performance.\nIn short, don’t just calculate metrics — demonstrate that you can interpret their meaning and implications for decision-making.\nExplanations can be dynamically generated using an AI-powered feature.\n\nClean and well-organized code following the recommended workflow below. (5 points)\n\n\n\n\n\n\n\nTip\n\n\n\nDeveloping key business metrics requires domain knowledge — understanding what drives the business. You can use EDA (Exploratory Data Analysis) and AI-powered Q&A to uncover key metrics worth tracking and reporting in the provided data.\n\n\n\n\n6.2.2 Recommended Workflow\nA structured workflow helps you move efficiently from exploration to production. It turns messy experimentation into reproducible, professional pipelines for real-world data projects.\n\nStep 1. Rapid EDA in a .ipynb\n\nCreate and Use a eda.ipynb notebook to inspect data quality, clean data, develop metrics, test feature ideas, and prototype formulas and metrics. No need to do predictive modeling.\n\n\n\nStep 2. Refactor into a .py metrics module\n\nMove code (cleaning, feature engineering, metric formulas) from the notebook into functions in metrics_utils.py. Add docstrings, type hints, and tests.\n\n\n\nStep 3. Import the module and design the Streamlit UI\n\nIn app.py, import metrics_utils, design and build a streamlit app that display key metrics that you identified. Choose proper features in the streamlit.\n\n\n\n\n\n\n\nNoteWhy this workflow works (the rationale)?\n\n\n\n\nMirrors the real development cycle: notebooks for development and experimentation, .py modules for stable logic ready for release, and Streamlit for production presentation.\nReusability: Metric functions can be reused across future apps and analyses.\nTestability: Logic in .py is easy to test (if name == “main”:).\nMaintainability: Update formulas once in the module, not in multiple places.\n\n\n\n\n\n\n6.2.3 Project Folder Structure\ncreate a adsanalyses folder in your home directory with the files structured below.\n# suggested folder structure under your home directory\nadsanalyses/\n├─ eda.ipynb        # your EDA\n├─ metrics_utils.py # functions for load data, and calculating metrics\n├─ app.py           # your streamlit app\n└─ ad_table.csv\n\n\n6.2.4 Submission\nFollow the instruction of the In-class Quiz.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Lab - Business Metrics Practice</span>"
     ]
