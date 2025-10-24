@@ -190,7 +190,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./groupproj.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Group Project - To be released</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Group Project - Email Marketing and Personalization</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -219,7 +219,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#bad-vs-good-prompts" id="toc-bad-vs-good-prompts" class="nav-link" data-scroll-target="#bad-vs-good-prompts"><span class="header-section-number">5.2.5</span> Bad vs Good Prompts</a></li>
   <li><a href="#lab-design-a-value-adding-ai-prompt-for-your-dashboard" id="toc-lab-design-a-value-adding-ai-prompt-for-your-dashboard" class="nav-link" data-scroll-target="#lab-design-a-value-adding-ai-prompt-for-your-dashboard"><span class="header-section-number">5.2.6</span> Lab: Design a Value-Adding AI Prompt for Your Dashboard</a></li>
   </ul></li>
-  <li><a href="#lab-add-an-ai-agent-to-your-dashboard-optional" id="toc-lab-add-an-ai-agent-to-your-dashboard-optional" class="nav-link" data-scroll-target="#lab-add-an-ai-agent-to-your-dashboard-optional"><span class="header-section-number">5.3</span> Lab: Add an AI Agent to your Dashboard (optional)</a></li>
+  <li><a href="#lab-add-an-ai-agent-to-your-dashboard-optional" id="toc-lab-add-an-ai-agent-to-your-dashboard-optional" class="nav-link" data-scroll-target="#lab-add-an-ai-agent-to-your-dashboard-optional"><span class="header-section-number">5.3</span> Lab: Add an AI Agent to your Dashboard (optional)</a>
+  <ul class="collapse">
+  <li><a href="#what-is-an-ai-agent" id="toc-what-is-an-ai-agent" class="nav-link" data-scroll-target="#what-is-an-ai-agent"><span class="header-section-number">5.3.1</span> What Is an AI Agent?</a></li>
+  <li><a href="#difference-between-llm-and-ai-agent" id="toc-difference-between-llm-and-ai-agent" class="nav-link" data-scroll-target="#difference-between-llm-and-ai-agent"><span class="header-section-number">5.3.2</span> Difference between LLM and AI Agent</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -448,9 +452,138 @@ Note
 </section>
 <section id="lab-add-an-ai-agent-to-your-dashboard-optional" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="lab-add-an-ai-agent-to-your-dashboard-optional"><span class="header-section-number">5.3</span> Lab: Add an AI Agent to your Dashboard (optional)</h2>
-<p>To be released.</p>
+<section id="what-is-an-ai-agent" class="level3" data-number="5.3.1">
+<h3 data-number="5.3.1" class="anchored" data-anchor-id="what-is-an-ai-agent"><span class="header-section-number">5.3.1</span> What Is an AI Agent?</h3>
+<p>An AI Agent is a system that uses an AI model—often a Large Language Model (LLM)—to <strong>reason, decide, and take actions</strong> toward a goal. Instead of just producing text, an agent can plan what to do next, <strong>call external tools (like APIs or databases)</strong>, and <strong>use the results to continue reasoning</strong>. In other words, it’s <strong>not just “answering questions,” it’s doing things</strong>.</p>
+<p>Think of an AI agent as an intelligent assistant that:</p>
+<ul>
+<li>Understands your goal (through natural language),</li>
+<li>Decides what steps to take,</li>
+<li>Executes tools or code to gather information or perform tasks,</li>
+<li>Reflects on results, and produces a final answer or output.</li>
+</ul>
+</section>
+<section id="difference-between-llm-and-ai-agent" class="level3" data-number="5.3.2">
+<h3 data-number="5.3.2" class="anchored" data-anchor-id="difference-between-llm-and-ai-agent"><span class="header-section-number">5.3.2</span> Difference between LLM and AI Agent</h3>
+<p>A Large Language Model (like Gemini, GPT, or Claude) is a text reasoning engine. It’s trained to predict and generate text based on patterns in language.</p>
+<p>An LLM by itself doesn’t have access to the outside world. For example, if you ask it about today’s news, it may not know the answer because its knowledge stops at a fixed cutoff date. Here are some knowledge cut-off dates for popular LLM to illustrate what they mean:</p>
+<ul>
+<li>GPT‑4 (by OpenAI): Knowledge cutoff around April 2023.</li>
+<li>GPT‑4o (OpenAI): Reported knowledge cutoff around October 2023.</li>
+<li>Gemini 2.0 Flash (by Google DeepMind): Knowledge cutoff reported around August 2024.</li>
+<li>Claude 3.5 Sonnet (by Anthropic): Knowledge cutoff around April 2024.</li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 50%">
+<col style="width: 39%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Concept</th>
+<th>What it Does</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>LLM</strong></td>
+<td>Generates and understands text</td>
+<td>Answer “What is AI?”</td>
+</tr>
+<tr class="even">
+<td><strong>AI Agent</strong></td>
+<td>Uses the LLM’s reasoning <em>plus</em> tools or actions to achieve goals</td>
+<td>Fetch news for AAPL, analyze it, summarize findings</td>
+</tr>
+</tbody>
+</table>
+<p>A LLM can’t directly fetch news, query APIs, or control apps—it only works with text it’s given. That’s where <strong>agents</strong> come in. Nowadays, many modern LLMs are becoming <strong>agentic — meaning they can not only generate text but also decide when and how to use external tools</strong>. These models can fetch real-time information, call APIs, write and run code, and even plan multi-step reasoning tasks.</p>
+<p>In this mini exercise, you’ll see how an mini AI agent can make simple decisions before taking action. The agent will use an LLM to reason about the company’s sector — if the selected ticker belongs to an IT or technology company, the model will decide to <strong>fetch the latest news</strong> using <code>yfiance</code> tools. Otherwise, it will decide to do nothing and respond that no action is needed. This simple logic from checks, decides, acts or not, illustrates how agents can combine reasoning and tool use to behave intelligently, even in small, rule-based workflows.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># mini_agent_two_actions.py</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># pip install yfinance google-genai</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># you may test run it in Colab to start</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># then revise and consider embed it in your streamlit app.</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os, json, yfinance <span class="im">as</span> yf</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> google <span class="im">import</span> genai</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>client <span class="op">=</span> genai.Client(api_key<span class="op">=</span><span class="st">"your--google--api"</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>MODEL <span class="op">=</span> <span class="st">"gemini-2.0-flash"</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fetch_news(ticker: <span class="bu">str</span>, limit: <span class="bu">int</span> <span class="op">=</span> <span class="dv">5</span>):</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Tool: get latest news for a ticker using yfinance."""</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>        news <span class="op">=</span> yf.Ticker(ticker).news <span class="kw">or</span> []</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">Exception</span>:</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>        news <span class="op">=</span> []</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    items <span class="op">=</span> []</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> n <span class="kw">in</span> news[:limit]:</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>        item_data <span class="op">=</span> {</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>            <span class="st">"title"</span>: n.get(<span class="st">"content"</span>, {}).get(<span class="st">"title"</span>),</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>            <span class="st">"link"</span>: n.get(<span class="st">"content"</span>, {}).get(<span class="st">"clickThroughUrl"</span>),</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Filter out entries with no title and link</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> item_data.get(<span class="st">"title"</span>) <span class="kw">and</span> item_data.get(<span class="st">"link"</span>):</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>          items.append(item_data)</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(items) <span class="co"># Keep print for debugging as in original code</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> items</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> decide_action(ticker: <span class="bu">str</span>):</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    prompt <span class="op">=</span> <span class="ss">f"""</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="ss">You can take ONE of two actions for a given stock ticker.</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="ss">1. fetch_news — if the ticker belongs to an IT or technology company</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="ss">   (e.g., AAPL, MSFT, GOOG, META, NVDA, AMZN, etc.)</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="ss">2. none — for any other sector or if you're unsure.</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a><span class="ss">Return STRICT JSON only:</span></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="ch">{{</span><span class="ss">"action": "fetch_news" | "none", "args": </span><span class="ch">{{</span><span class="ss">"ticker": "&lt;T&gt;", "limit": &lt;int&gt;</span><span class="ch">}}}}</span></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="ss">Use ticker="</span><span class="sc">{</span>ticker<span class="sc">}</span><span class="ss">".</span></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>    resp <span class="op">=</span> client.models.generate_content(</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>        model<span class="op">=</span>MODEL,</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>        contents<span class="op">=</span>prompt,</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>        config<span class="op">=</span>{<span class="st">"response_mime_type"</span>:<span class="st">"application/json"</span>}</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> json.loads(resp.text)</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> final_answer(ticker: <span class="bu">str</span>, action: <span class="bu">str</span>, items<span class="op">=</span><span class="va">None</span>):</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> action <span class="op">==</span> <span class="st">"none"</span>:</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f"The ticker **</span><span class="sc">{</span>ticker<span class="sc">}</span><span class="ss">** is not in the IT sector — no action taken."</span></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>    prompt <span class="op">=</span> <span class="ss">f"""</span></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a><span class="ss">Summarize the latest news for </span><span class="sc">{</span>ticker<span class="sc">}</span><span class="ss"> using ONLY this JSON list:</span></span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a><span class="sc">{</span>json<span class="sc">.</span>dumps(items, indent<span class="op">=</span><span class="dv">2</span>)<span class="sc">}</span></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a><span class="ss">Return short markdown:</span></span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a><span class="ss">- 2–3 key insights</span></span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a><span class="ss">- One-line sentiment (Positive/Neutral/Negative)</span></span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a><span class="ss">- Sources as bullet links: [Publisher — Title](URL)</span></span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a><span class="ss">"""</span></span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>    resp <span class="op">=</span> client.models.generate_content(</span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>        model<span class="op">=</span>MODEL,</span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>        contents<span class="op">=</span>prompt,</span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>        config<span class="op">=</span>{<span class="st">"response_mime_type"</span>: <span class="st">"text/plain"</span>}</span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> resp.text</span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> run(ticker<span class="op">=</span><span class="st">"AAPL"</span>):</span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>    plan <span class="op">=</span> decide_action(ticker)</span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>    action <span class="op">=</span> plan.get(<span class="st">"action"</span>, <span class="st">"none"</span>)</span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>    args <span class="op">=</span> plan.get(<span class="st">"args"</span>, {})</span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> action <span class="op">==</span> <span class="st">"fetch_news"</span>:</span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>        items <span class="op">=</span> fetch_news(args.get(<span class="st">"ticker"</span>, ticker), <span class="bu">int</span>(args.get(<span class="st">"limit"</span>, <span class="dv">5</span>)))</span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>        answer <span class="op">=</span> final_answer(ticker, action, items)</span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>        answer <span class="op">=</span> final_answer(ticker, action)</span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(answer)</span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a>    <span class="co">#run("AAPL")   # should fetch news</span></span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a>    run(<span class="st">"TLT"</span>)  <span class="co"># try a non-IT ticker for "none" action</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
