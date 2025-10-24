@@ -209,16 +209,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#requirements" id="toc-requirements" class="nav-link active" data-scroll-target="#requirements"><span class="header-section-number">6.1</span> Requirements</a></li>
-  <li><a href="#recommended-workflow" id="toc-recommended-workflow" class="nav-link" data-scroll-target="#recommended-workflow"><span class="header-section-number">6.2</span> Recommended Workflow</a>
+  <li><a href="#business-metrics" id="toc-business-metrics" class="nav-link active" data-scroll-target="#business-metrics"><span class="header-section-number">6.1</span> Business Metrics</a></li>
+  <li><a href="#lab-business-metrics-dashboard" id="toc-lab-business-metrics-dashboard" class="nav-link" data-scroll-target="#lab-business-metrics-dashboard"><span class="header-section-number">6.2</span> Lab: Business Metrics Dashboard</a></li>
+  <li><a href="#requirements" id="toc-requirements" class="nav-link" data-scroll-target="#requirements"><span class="header-section-number">6.3</span> Requirements</a></li>
+  <li><a href="#recommended-workflow" id="toc-recommended-workflow" class="nav-link" data-scroll-target="#recommended-workflow"><span class="header-section-number">6.4</span> Recommended Workflow</a>
   <ul class="collapse">
   <li><a href="#step-1.rapid-eda-in-a-.ipynb" id="toc-step-1.rapid-eda-in-a-.ipynb" class="nav-link" data-scroll-target="#step-1.rapid-eda-in-a-.ipynb">Step 1.Rapid EDA in a .ipynb</a></li>
   <li><a href="#step-2.-refactor-into-a-.py-metrics-module" id="toc-step-2.-refactor-into-a-.py-metrics-module" class="nav-link" data-scroll-target="#step-2.-refactor-into-a-.py-metrics-module">Step 2. Refactor into a .py metrics module</a></li>
   <li><a href="#step-3.-import-the-module-and-design-the-streamlit-ui" id="toc-step-3.-import-the-module-and-design-the-streamlit-ui" class="nav-link" data-scroll-target="#step-3.-import-the-module-and-design-the-streamlit-ui">Step 3. Import the module and design the Streamlit UI</a></li>
   </ul></li>
-  <li><a href="#project-folder-structure" id="toc-project-folder-structure" class="nav-link" data-scroll-target="#project-folder-structure"><span class="header-section-number">6.3</span> Project Folder Structure</a>
+  <li><a href="#project-folder-structure" id="toc-project-folder-structure" class="nav-link" data-scroll-target="#project-folder-structure"><span class="header-section-number">6.5</span> Project Folder Structure</a>
   <ul class="collapse">
-  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission"><span class="header-section-number">6.3.1</span> Submission</a></li>
+  <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission"><span class="header-section-number">6.5.1</span> Submission</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -245,11 +247,52 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<section id="business-metrics" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="business-metrics"><span class="header-section-number">6.1</span> Business Metrics</h2>
+<p>A business or data analyst’s job <strong>begins with identifying the right questions to ask</strong>. The next step is to <strong>find the best possible answers within the available time and resources</strong>. Finally, the analyst must ensure that these insights lead to <strong>practical impact by turning them into clear, actionable recommendations</strong> that can be communicated effectively to decision-makers.</p>
+<p>The most important question for any analyst or decision-maker is: <strong><em>What changes can we make in our business processes right now to increase revenue, improve profitability, or reduce risk</em></strong>?</p>
+<p>Business metrics provide the foundation for answering that question. By tracking and analyzing key metrics, <strong>generally grouped into revenue, profitability, and risk</strong>, we can identify where change is needed, measure its potential impact, and guide smarter decisions for immediate and long-term improvement.</p>
+<ul>
+<li><strong>Revenue metrics</strong> focus on sales and marketing performance — they’re outward-facing and show how effectively a company generates income.
+<ul>
+<li>Everything that relates directly or indirectly to selling is a revenue metric.</li>
+</ul></li>
+<li><strong>Profitability metrics</strong> measure how efficiently a company turns resources into profit through production, logistics, and operations.
+<ul>
+<li>Examples include how often the company is unable to meet urgent customer requests and loses sales because of insufficient production or inventory.</li>
+<li>These metrics highlight how effectively the business controls costs and minimizes waste to maximize profit.</li>
+</ul></li>
+<li><strong>Risk metrics</strong> assess financial stability and exposure, mainly used by risk managers, creditors, and investors. Such as:
+<ul>
+<li>Net cash out: how many months can the company survive at the present burn rate?<br>
+</li>
+<li>Churn rate.</li>
+<li>Debts.</li>
+</ul></li>
+</ul>
+<p>A good company should track all three types of metrics.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Dynamic Metrics
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>It’s important to remember that <strong>useful business metrics are dynamic</strong> — they may change over time therefore <strong>they should always be measured and interpreted within a specific time frame</strong>.</p>
+</div>
+</div>
+</section>
+<section id="lab-business-metrics-dashboard" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="lab-business-metrics-dashboard"><span class="header-section-number">6.2</span> Lab: Business Metrics Dashboard</h2>
 <p>Please download and read the case package on Canvas.</p>
 <p><img src="images/day2lab.png" class="img-fluid"></p>
-<p>The goal of this in-class project is to <strong>look at a few ad campaigns, analyze their current performance, and create a dashboard to report the key business metrics</strong>.</p>
-<section id="requirements" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="requirements"><span class="header-section-number">6.1</span> Requirements</h2>
+<p>The goal of this in-class project is to <strong>look at a few ad campaigns, analyze their current performance, identify key business metrics and create a dashboard to report them</strong>.</p>
+</section>
+<section id="requirements" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="requirements"><span class="header-section-number">6.3</span> Requirements</h2>
 <p>From a business perspective, specifically, you are asked to:</p>
 <ul class="task-list">
 <li><label><input type="checkbox">Identify critical business metrics and distinguish them from mere data (5 points)</label></li>
@@ -264,8 +307,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><label><input type="checkbox">Clean and well-organized code following the recommended workflow below. (5 points)</label></li>
 </ul>
 </section>
-<section id="recommended-workflow" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="recommended-workflow"><span class="header-section-number">6.2</span> Recommended Workflow</h2>
+<section id="recommended-workflow" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="recommended-workflow"><span class="header-section-number">6.4</span> Recommended Workflow</h2>
 <p>A structured workflow helps you move efficiently from exploration to production. It turns messy experimentation into reproducible, professional pipelines for real-world data projects.</p>
 <section id="step-1.rapid-eda-in-a-.ipynb" class="level3 unnumbered">
 <h3 class="unnumbered anchored" data-anchor-id="step-1.rapid-eda-in-a-.ipynb">Step 1.Rapid EDA in a .ipynb</h3>
@@ -304,8 +347,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section>
 </section>
-<section id="project-folder-structure" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="project-folder-structure"><span class="header-section-number">6.3</span> Project Folder Structure</h2>
+<section id="project-folder-structure" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="project-folder-structure"><span class="header-section-number">6.5</span> Project Folder Structure</h2>
 <p>create a <code>adsanalyses</code> folder in your home directory with the files structured below.</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># suggested folder structure under your home directory</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">adsanalyses/</span></span>
@@ -313,8 +356,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">├─</span> metrics_utils.py <span class="co"># functions for load data, and calculating metrics</span></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">├─</span> app.py           <span class="co"># your streamlit app</span></span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ex">└─</span> ad_table.csv</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<section id="submission" class="level3" data-number="6.3.1">
-<h3 data-number="6.3.1" class="anchored" data-anchor-id="submission"><span class="header-section-number">6.3.1</span> Submission</h3>
+<section id="submission" class="level3" data-number="6.5.1">
+<h3 data-number="6.5.1" class="anchored" data-anchor-id="submission"><span class="header-section-number">6.5.1</span> Submission</h3>
 <p>Follow the instruction of the In-class Quiz.</p>
 <p><img src="images/day2lab.png" class="img-fluid"></p>
 
